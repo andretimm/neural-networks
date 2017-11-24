@@ -1,0 +1,29 @@
+Perceptron (uma camada)
+
+	Função soma = entrada1 * peso1 + entrada2 * peso2 + estrandaN * pesoN
+	Formula pra encontar o erro :
+	erro = respostaCorreta - respostaCalculada
+	Ajustas pessos :
+	peso(n + 1) = peso(n) + (taxaAprendizagem * entrada * erro)
+	Função de aditivação multicamadas : Sigmoid  = y = 1 / (1+ exponncial(-x))
+	
+	Cost function = erro
+	Gradiente (quanto ajustar os pessos)-> Fazer o calculo da derivita parcial, para encontrar o conjunto de pesos que tenha o menor Cost (erro)
+	Derivata parcial = y * (1 - y)
+	DeltaSaida = Erro * DerivadaSigmoid
+	DeltaCamadaOculta = DerivadaSigmoid * peso * DeltaSaida
+	Taxa de aprendizagem = Define quão rapido o algoritmo vai aprender
+		alto : a convergência é rapida mas pode perde o minimo global
+		baixo: será mais lento mas tem mais chances de chegar no mínimo global
+	Momento = Escapar de minímos locais. (Define o quão confiavel é a ultima alteração)
+		alto : Auemnta a velociade da convergência
+		baixo: pode evitar mínimos locais
+	Backbropagation = pesos[n+1] = (pessos[n] * momento) + (entrada * delta * taxa de aprendizagem)
+	
+	Bias 
+		Valores diferentes mesmo se todas as entradas forem zero
+		Muda a saída com a unidade de bias
+		
+	Formulas de erros
+		Mesn square error (MSE)
+		Root mean square erros (RMSE) 
