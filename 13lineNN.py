@@ -1,7 +1,6 @@
 '''
 Simplest NN Sample
 13 lines
-
 '''
 
 import numpy as np
